@@ -1,0 +1,12 @@
+
+\.idea/
+
+utils/__pycache__/
+
+venv/Lib/site-packages/
+
+venv/Lib/tcl8\.6/
+
+venv/
+
+checkers/__pycache__/
