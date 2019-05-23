@@ -1,0 +1,30 @@
+general:
+  total_threads: 100
+  timeout: 1 #in minutes
+  results: "{current}/results/[%d-%m-%Y %H-%M-%S]/"
+  useragent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"
+
+proxies:
+  enabled: True
+  threads: 100
+  timeout: 10 #in seconds
+  use_http: True
+  use_socks4: True
+  use_socks5: True
+  check_http: False
+  check_socks4: False
+  check_socks5: False
+
+minecraft:
+  enabled: True
+  timeout: 3 # in seconds
+  check_amount: 4 # How many times an account should be used | needs to be 1 or higher
+  max_errors_per_try: 3
+  account_format: "{email}:{password}:{uuid}"
+  outputname: "working_{checkername}_{unix}.txt"
+
+ipvanish:
+  enabled: True
+  timeout: 3 # in seconds
+  max_errors_per_try: 5
+  outputname: "working_{checkername}_{unix}.txt"
