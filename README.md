@@ -32,6 +32,20 @@ Run main.py to start.
 ```bash
 python main.py
 ```
+We also support optional arguments
+
+`--combos` is used to change the combo path.
+
+`--proxieshttp` is used to change the http proxy path.
+
+`--proxiessocks4` is used to change the socks4 proxy path.
+
+`--proxiessocks5` is used to change the socks5 proxy path.
+
+`--config` is used to change the path of the config that should be used.
+```bash
+python main.py --combos "combos-1.txt" --config "otherconfig.yml"
+```
 
 ## Tutorial
 Will be added soon.
