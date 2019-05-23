@@ -5,7 +5,7 @@
 [![test](https://img.shields.io/github/commits-since/scorpion3013/checkolotl/latest.svg?style=flat)](https://github.com/scorpion3013/checkolotl/releases/latest)
 # checkolotl
 
-checkolotl is an account checker made which python 3.6.
+checkolotl is an account checker made with python 3.6.
 
 Warning: This checker has no WINDOWS yet (The checker uses the reprint libary which has no windows support, I will add a Windows mode sooner or later. (You can run it on Windows using WSL)
 
