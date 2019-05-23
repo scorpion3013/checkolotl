@@ -1,6 +1,6 @@
 general:
   total_threads: 100
-  timeout: 1 #in minutes
+  timeout: 60 #in minutes
   results: "{current}/results/[%d-%m-%Y %H-%M-%S]/"
   useragent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"
 
@@ -11,9 +11,9 @@ proxies:
   use_http: True
   use_socks4: True
   use_socks5: True
-  check_http: False
-  check_socks4: False
-  check_socks5: False
+  check_http: True
+  check_socks4: True
+  check_socks5: True
 
 minecraft:
   enabled: True
