@@ -4,7 +4,7 @@
 [![test](https://img.shields.io/github/release-date/scorpion3013/checkolotl.svg?style=flat)](https://github.com/scorpion3013/checkolotl/releases/latest)
 [![test](https://img.shields.io/github/commits-since/scorpion3013/checkolotl/latest.svg?style=flat)](https://github.com/scorpion3013/checkolotl/releases/latest)
 # checkolotl
-
+# ![checkolotl](https://axolotl.club/kXcgfwFQ.png?key=hsu4HB0DlFin2x)
 checkolotl is an account checker made with python 3.6.
 
 Warning: This checker has no WINDOWS support yet (The checker uses the reprint libary which has no windows support, I will add a Windows mode sooner or later. (You can run it on Windows using WSL)
