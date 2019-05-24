@@ -1,3 +1,4 @@
+#! /bin/python
 import importlib
 import random
 import string
