@@ -1,4 +1,5 @@
 #! /bin/python
+import utils.version
 import importlib
 import random
 import string
