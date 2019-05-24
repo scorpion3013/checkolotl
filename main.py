@@ -79,7 +79,7 @@ with output(output_type='dict') as output_lines:
             break
 
         time.sleep(0.5)
-time.sleep(0.2)
+time.sleep(1)
 if o == int(settings.general.timeout) * 60:
     print("[Checker] reached timeout value. Closing...")
 else:
