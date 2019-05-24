@@ -17,7 +17,7 @@ proxies:
 
 minecraft:
   enabled: True
-  timeout: 3 # in seconds
+  timeout: 4 # in seconds
   check_amount: 4 # How many times an account should be used | needs to be 1 or higher
   max_errors_per_try: 3
   account_format: "{email}:{password}:{uuid}"
@@ -25,6 +25,13 @@ minecraft:
 
 ipvanish:
   enabled: True
-  timeout: 3 # in seconds
+  timeout: 4 # in seconds
   max_errors_per_try: 5
+  outputname: "working_{checkername}_{unix}.txt"
+  
+  nordvpn:
+  enabled: True
+  timeout: 10 # in seconds
+  max_errors_per_try1: 5
+  max_errors_per_try2: 5
   outputname: "working_{checkername}_{unix}.txt"
