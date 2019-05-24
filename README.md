@@ -16,6 +16,10 @@ git clone https://github.com/scorpion3013/checkolotl
 ```bash
 cd checkolotl/
 ```
+Update it with
+```bash
+git pull
+```
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the all the external libs that are used within this checker.
 
 ```bash
