@@ -41,8 +41,9 @@ def check(x):
                         if stage_one_json.get("errors").get("code") == 101301:
                             pass
                         else:
-                            print(stage_one_json.get("errors").get("code"))
-                            print(stage_one_json)
+                            pass
+                            #print(stage_one_json.get("errors").get("code"))
+                            #print(stage_one_json)
                         accounts.invalid_nordvpn.append(f"{username}:{password}")
                         return
                     check2(username=username, password=password, stage_one_json=stage_one_json, proxs_list=proxs_list)
