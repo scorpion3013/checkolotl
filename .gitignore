@@ -10,3 +10,5 @@ venv/Lib/tcl8\.6/
 venv/
 
 checkers/__pycache__/
+
+results/
