@@ -29,7 +29,7 @@ ipvanish:
   max_errors_per_try: 5
   outputname: "working_{checkername}_{unix}.txt"
   
-  nordvpn:
+nordvpn:
   enabled: True
   timeout: 10 # in seconds
   max_errors_per_try1: 5
