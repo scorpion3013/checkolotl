@@ -74,8 +74,7 @@ with output(output_type='dict') as output_lines:
             output_lines["[Checker] " + che] = str(len(eval("accounts.valid_" + che)) + len(eval("accounts.invalid_" + che))) + " / " + str(len(accounts.combos)) + " Hits: " + str(len(eval("accounts.valid_" + che)))
             if len(eval("accounts.valid_" + che)) > 0:
                 replacer = {"checkername" : str(che), "unix": str(int(start_unix))}
-                with open(save_path + eval("settings." + che + ".outputname").format(**replacer), mode="wt", encoding="utf-8") as result_file:
-                    result_file.write('\n'.join(eval("accounts.valid_" + che)))
+                open(save_path + eval("settings." + che + ".outputname").format(**replacer), mode="wt", encoding="utf-8").write('\n'.join(eval("accounts.valid_" + che)))
         if senpai.p == len(registered_checkers):
             break
 
