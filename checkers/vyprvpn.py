@@ -52,7 +52,7 @@ def check(x):
                 if r_json.get("vpn"):
                     if r_json.get("vpn").get("account_level"):
                         account_type = r_json.get("vpn").get("account_level")
-                        accounts.valid_ipvanish.append(f"{username}:{password}:{account_type}")
+                        accounts.valid_vyprvpn.append(f"{username}:{password}:{account_type}")
                         return
                 else:
                     #exits the check if the account never had a vpn plan
