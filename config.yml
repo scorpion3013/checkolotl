@@ -25,7 +25,13 @@ minecraft:
 
 ipvanish:
   enabled: True
-  timeout: 4 # in seconds
+  timeout: 5 # in seconds
+  max_errors_per_try: 5
+  outputname: "working_{checkername}_{unix}.txt"
+
+vyprvpn:
+  enabled: True
+  timeout: 5 # in seconds
   max_errors_per_try: 5
   outputname: "working_{checkername}_{unix}.txt"
   
