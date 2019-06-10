@@ -41,3 +41,10 @@ nordvpn:
   max_errors_per_try1: 5
   max_errors_per_try2: 5
   outputname: "working_{checkername}_{unix}.txt"
+
+airvpn:
+  enabled: True
+  timeout: 10 # in seconds
+  max_errors_per_try1: 5
+  max_errors_per_try2: 5
+  outputname: "working_{checkername}_{unix}.txt"
