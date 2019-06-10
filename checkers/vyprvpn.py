@@ -51,10 +51,14 @@ def check(x):
                 r_json = r.json()
                 if r_json.get("vpn"):
                     if r_json.get("vpn").get("account_level"):
-                        if not r_json.get("vpn").get("locked"):
+                        if r_json.get("vpn").get("locked"):
+                            accounts.valid_vyprvpn.append(f"{username}:{password}:{account_type}LOCKED")
+                            return
+                        else:
                             account_type = r_json.get("vpn").get("account_level")
                             accounts.valid_vyprvpn.append(f"{username}:{password}:{account_type}")
                             return
+
                     else:
                         break
                 else:
