@@ -68,5 +68,6 @@ def login(combo, cookie, csrfKey, proxs_list):
             else:
                 break
         except:
+            proxs_list = proxy_getter(__name__)
             continue
     accounts.invalid_airvpn.append(f"{username}:{password}")
