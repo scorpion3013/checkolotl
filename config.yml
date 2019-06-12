@@ -54,6 +54,7 @@ fortnite:
   timeout: 5 # in seconds
   max_errors_per_try1: 5
   max_errors_per_try2: 3
+  user_agent: "Fortnite/++Fortnite+Release-4.5-CL-4166199 Windows/6.2.9200.1.768.64bit"
   authkey: "basic MzQ0NmNkNzI2OTRjNGE0NDg1ZDgxYjc3YWRiYjIxNDE6OTIwOWQ0YTVlMjVhNDU3ZmI5YjA3NDg5ZDMxM2I0MWE="
   # You should get your own authkey, follow this guide for it -> https://github.com/qlaffont/fortnite-api#init
   outputname: "working_{checkername}_{unix}.txt"
