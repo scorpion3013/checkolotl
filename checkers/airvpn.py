@@ -24,6 +24,7 @@ re_failed = r"The username or password was incorrect"
 
 def check(x):
     combo = accounts.combos[x].strip()
+    combo = combo.split(":")
     username = combo[0]
     password = ":".join(combo[1:])
     for x in range(0, int(settings.airvpn.max_errors_per_try1)):
