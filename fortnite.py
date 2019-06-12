@@ -44,7 +44,7 @@ def stats(account_id, access_token, proxs_list):
     header_two = {
         'Authorization': f"bearer {access_token}",
         'Content-Type': "application/json",
-        'User-Agent': "PostmanRuntime/7.13.0",
+        'User-Agent': "Fortnite/++Fortnite+Release-4.5-CL-4166199 Windows/6.2.9200.1.768.64bit",
         'Accept': "*/*",
         'Cache-Control': "no-cache",
         'Host': "fortnite-public-service-prod11.ol.epicgames.com",
