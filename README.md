@@ -57,6 +57,12 @@ Will be added soon.
 ## Support
 Discord link: Will be added soon.
 
+# Terms and conditions
+- This repository is for educational purposes only
+- You won't use this application/code to attempt to obtain accounts which are NOT yours (bruteforcing, etc...)
+- You won't use this application/code to do anything unlawful or commit crimes
+- I am not responsible for any actions done by people who use this code
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
