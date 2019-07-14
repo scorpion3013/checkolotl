@@ -54,6 +54,10 @@ python main.py --combos "combos-1.txt" --config "otherconfig.yml"
 ## Tutorial
 Will be added soon.
 
+https://streamable.com/6x2sl
+
+bad but yeah
+
 ## Support
 Discord link: Will be added soon.
 
