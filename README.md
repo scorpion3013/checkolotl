@@ -22,6 +22,8 @@ git pull
 ```
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the all the external libs that are used within this checker.
 
+You need the pip that is bound to python 3.X so you may need to use pip3
+
 ```bash
 pip install -r requirements.txt
 ```
