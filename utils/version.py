@@ -1,7 +1,7 @@
 import requests
 import time
 import json
-version = "v1.1.0"
+version = "v1.1.1"
 try:
     r = requests.get(url="https://api.github.com/repos/scorpion3013/checkolotl/releases", timeout=5).json()
     latest = r[0].get("tag_name")
