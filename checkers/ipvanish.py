@@ -34,7 +34,7 @@ def check(x):
                     Proxies.checked_json[proxs_list[0]]["bans"]["ipvanish"] = True
                     continue
                 if re.findall(pattern=active, string=r.text):
-                    expire_date_string = re.findall(pattern=expire_date, string=r.text)[0]
+                    expire_date_string = re.findall(pattern=expire_date, string=r.text)[0].replace("/", "-")
                     # add save stuff here
                     accounts.valid_ipvanish.append(f"{username}:{password}:{expire_date_string}")
                     return
