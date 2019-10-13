@@ -22,6 +22,8 @@ git pull
 ```
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the all the external libs that are used within this checker.
 
+You need the pip that is bound to python 3.X so you may need to use pip3
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -54,8 +56,18 @@ python main.py --combos "combos-1.txt" --config "otherconfig.yml"
 ## Tutorial
 Will be added soon.
 
+https://streamable.com/6x2sl
+
+bad but yeah
+
 ## Support
 Discord link: Will be added soon.
+
+# Terms and conditions
+- This repository is for educational purposes only
+- You won't use this application/code to attempt to obtain accounts which are NOT yours (bruteforcing, etc...)
+- You won't use this application/code to do anything unlawful or commit crimes
+- I am not responsible for any actions done by people who use this code
 
 
 ## Contributing
