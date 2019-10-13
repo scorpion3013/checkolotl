@@ -31,7 +31,7 @@ def check(x):
                     continue
                 if r.status_code == 200:
                     uuid = r.json().get("availableProfiles")[0].get("id")
-                    if r.json().get("availableProfiles")[0].get("paid"):
+                    if uuid:
                         wanted_format = settings.minecraft.account_format
                         replacer = {"uuid": uuid, "email": email, "password": password}
                         formatted = wanted_format.format(**replacer)
