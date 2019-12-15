@@ -44,6 +44,16 @@ bash ./main --combos "combos-1.txt" --config "otherconfig.yml"
 ### Tutorial
 Will be added soon.
 
+### Release version system
+
+vx.y.z
+
+x -> will change when a recode happens or an other big update
+
+y -> will change when something in the config is changed, for example if a new check is added
+
+z -> will change for bugfixes and improvements that don't require a config change
+
 
 ### Support
 Discord link: Will be added soon. (Maybe)
