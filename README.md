@@ -1,8 +1,8 @@
 [![star this repo](http://githubbadges.com/star.svg?user=scorpion3013&repo=checkolotl&style=flat)](https://github.com/scorpion3013/checkolotl)
 [![fork this repo](http://githubbadges.com/fork.svg?user=scorpion3013&repo=checkolotl&style=flat)](https://github.com/scorpion3013/checkolotl/fork)
 [![test](https://img.shields.io/github/last-commit/scorpion3013/checkolotl.svg?style=flat)](https://github.com/scorpion3013/checkolotl/commits/v2)
-[![test](https://img.shields.io/github/release-date/scorpion3013/checkolotl.svg?style=flat)](https://github.com/scorpion3013/checkolotl/releases/latest)
-[![test](https://img.shields.io/github/commits-since/scorpion3013/checkolotl/latest.svg?style=flat)](https://github.com/scorpion3013/checkolotl/releases/latest)
+[![test](https://img.shields.io/github/v/release/scorpion3013/checkolotl.svg?style=flat)](https://github.com/scorpion3013/checkolotl/releases/latest)
+
 # checkolotl
 <img src="https://raw.githubusercontent.com/scorpion3013/checkolotl/v2/logo.png" width="128" height="125">
 
