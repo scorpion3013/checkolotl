@@ -9,10 +9,5 @@ results/
 
 *.spec
 
-proxies.txt
-
-combos.txt
-
-config.yml
 
 venv/
