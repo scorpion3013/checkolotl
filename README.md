@@ -9,7 +9,7 @@
 
 checkolotl is an account checker made with python 3.6.
 
-## Installation and Running
+### Installation and Running
 Just download the latest release.
 
 
@@ -29,7 +29,7 @@ Supply the proxies.txt with proxies in the following formats:
 
 
 
-#Start arguments
+###Start arguments
 
 `--combos` is used to change the combo path.
 
@@ -41,26 +41,26 @@ Supply the proxies.txt with proxies in the following formats:
 bash ./main --combos "combos-1.txt" --config "otherconfig.yml"
 ```
 
-## Tutorial
+### Tutorial
 Will be added soon.
 
 
-## Support
+### Support
 Discord link: Will be added soon. (Maybe)
 
-# Terms and conditions
+### Terms and conditions
 - This repository is for educational purposes only
 - You won't use this application/code to attempt to obtain accounts which are NOT yours (bruteforcing, etc...)
 - You won't use this application/code to do anything unlawful or commit crimes
 - I am not responsible for any actions done by people who use this code
 
 
-## Contributing
+### Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure that the checker still works.
 
-## License
+### License
 Not set yet.
 So for now (15.12.2019)
 
