@@ -1,0 +1,7 @@
+https://hostname:port
+https://username:password@hostname:port
+
+socks4://hostname:port
+
+socks5://hostname:port
+socks5://username:password@hostname:port

@@ -1,0 +1,53 @@
+checker_general:
+  threads: 200
+  order: "one" # one or all
+  # one starts x threads and uses the x threads for one checker at a time
+  # all statts x threads which all start a subthread for every checker. (faster but rip your network and cpu)
+  timeout: 60 #in minutes
+  path: "{current}/results/[%d-%m-%Y %H-%M-%S]/"
+  print_hits: False
+  remove_duplicate_combos: True
+  remove_duplicate_proxies: True
+
+
+proxies_checker:
+  threads: 200
+  timeout: 4
+  judge_url: "https://azenv.net/"
+  ip_regex: "REMOTE_ADDR = (.*)"
+
+announcer:
+  discord_webhook_url: ""
+  on_start:
+    discord:
+      enabled: True
+      post_combos: False
+  on_end:
+    discord:
+      enabled: True
+      post_results: False
+
+checkers:
+  minecraft:
+    enabled: True
+    timeout: 4
+    check_amount: 1 # rechecks if invalid or on error
+    remove_banned_proxy: True
+    account_format: "{email}:{password}:{uuid}:{name}"
+    outputname: "working_{checkername}_{unix}.txt"
+
+  nordvpn:
+    enabled: True
+    timeout: 4
+    check_amount: 4 #rechecks on error or on captcha
+    remove_banned_proxy: True
+    account_format: "{email}:{password}:{expireunix}:%d-%m-%Y"
+    outputname: "working_{checkername}_{unix}.txt"
+
+  vyprvpn:
+    enabled: True
+    timeout: 4
+    check_amount: 4 #rechecks on error or on captcha
+    remove_banned_proxy: True
+    account_format: "{email}:{password}:{rank}"
+    outputname: "working_{checkername}_{unix}.txt"
