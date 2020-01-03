@@ -1,7 +1,7 @@
 from checkolotl.settings import settings, toggled_checkers
 from checkolotl.values import combos, other
 from checkolotl.status import create_bar
-from checkolotl.checkers import minecraft, nordvpn, vyprvpn
+from checkolotl.checkers import minecraft, nordvpn, vyprvpn, ipvanish #needed for the evaluation
 
 
 from multiprocessing.dummy import Pool as ThreadPool
@@ -26,6 +26,7 @@ def start():
             for check in toggled_checkers:
                 hits.append(check[:2] + ": " + str(len(combos.results[check])))
             other.status_bar.set_postfix_str(" | ".join(hits))
+            other.status_bar.refresh()
 
         other.status_bar = create_bar(len(combos.raw), "Combos", "")
         pool = ThreadPool(settings.checker_general.threads)
@@ -42,6 +43,7 @@ def start():
                 eval(check + ".check(combo)")
                 other.status_bar.update(1)
                 other.status_bar.set_postfix_str(check[:2] + ": " + str(len(combos.results[check])))
+                other.status_bar.refresh()
 
             other.status_bar = create_bar(len(combos.raw), check, "")
             pool = ThreadPool(settings.checker_general.threads)

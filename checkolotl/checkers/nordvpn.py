@@ -7,6 +7,7 @@ import time
 from datetime import datetime
 import requests
 import urllib
+
 header_one = {
     "Accept": "\"/\"",
     "User-Agent": "NordApp windows (main/6.18.9.0) windows/Microsoft Windows NT 10.0.17134.0",
@@ -80,9 +81,9 @@ def check2(token, proxy):
         }
         try:
             r = requests.get(url="https://zwyr157wwiu6eior.com/v1/users/services",
-                              headers=header,
-                              timeout=settings.checkers.nordvpn.timeout,
-                              proxies=proxy_dict)
+                             headers=header,
+                             timeout=settings.checkers.nordvpn.timeout,
+                             proxies=proxy_dict)
         except:
             proxies_to_ban.append(proxy)
             proxy = get_proxy("nordvpn")
@@ -95,4 +96,3 @@ def check2(token, proxy):
         if r.status_code == 400:
             return [None, None]
     return [None, None]
-

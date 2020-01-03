@@ -1,7 +1,6 @@
 import checkolotl.utils.args as args
 import yaml
 
-
 if __name__ == "checkolotl.settings":
     config = yaml.load(open(args.arguments.config, 'r', encoding="utf8", errors='ignore'), Loader=yaml.Loader)
     all_checkers = []
@@ -11,8 +10,9 @@ if __name__ == "checkolotl.settings":
     for check in config["checkers"].keys():
         if config["checkers"][check]["enabled"]:
             toggled_checkers.append(check)
-class settings:
 
+
+class settings:
     class paths:
         combos = args.arguments.combos
         proxies = args.arguments.proxies
@@ -31,17 +31,19 @@ class settings:
 
     class proxies_checker:
         _config = config["proxies_checker"]
+        skipCheck = _config["skipCheck"]
         threads = _config["threads"]
         timeout = _config["timeout"]
         judge_url = _config["judge_url"]
         ip_regex = _config["ip_regex"]
 
-    class announcer:
+    class events:
         _config = config["announcer"]
         discord_webhook_url = _config["discord_webhook_url"]
 
         class on_start:
             _config = config["announcer"]["on_start"]
+            command = _config["command"]
             class discord:
                 _config = config["announcer"]["on_start"]["discord"]
                 enabled = _config["enabled"]
@@ -49,10 +51,12 @@ class settings:
 
         class on_end:
             _config = config["announcer"]["on_end"]
+            command = _config["command"]
             class discord:
                 _config = config["announcer"]["on_end"]["discord"]
                 enabled = _config["enabled"]
                 post_results = _config["post_results"]
+
 
     class checkers:
         _config = config["checkers"]
@@ -84,3 +88,11 @@ class settings:
             account_format = _config["account_format"]
             outputname = _config["outputname"]
 
+        class ipvanish:
+            _config = config["checkers"]["ipvanish"]
+            enabled = _config["enabled"]
+            timeout = _config["timeout"]
+            check_amount = _config["check_amount"]
+            remove_banned_proxy = _config["remove_banned_proxy"]
+            account_format = _config["account_format"]
+            outputname = _config["outputname"]

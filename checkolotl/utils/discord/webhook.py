@@ -17,7 +17,7 @@ def start():
     checkers = "\n".join(checkers)
     combo_amount = len(combos.raw)
     proxy_amount = len(proxies.raw)
-    webhook = DiscordWebhook(url=settings.announcer.discord_webhook_url)
+    webhook = DiscordWebhook(url=settings.events.discord_webhook_url)
     embed = DiscordEmbed(title='Checkolotl Started', color=0x06bd22)
     embed.set_footer(text='Checkolotl by scorpion3013')
     embed.set_timestamp()
@@ -28,8 +28,8 @@ def start():
     webhook.add_embed(embed)
     webhook.execute()
 
-    if settings.announcer.on_start.discord.post_combos:
-        webhook = DiscordWebhook(url=settings.announcer.discord_webhook_url)
+    if settings.events.on_start.discord.post_combos:
+        webhook = DiscordWebhook(url=settings.events.discord_webhook_url)
         with open(settings.paths.combos, "rb") as f:
             webhook.add_file(file=f.read(), filename='combos.txt')
         webhook.execute()
@@ -44,7 +44,7 @@ def end():
     combo_amount = len(combos.raw)
     proxy_amount = str(proxies.working_count)
 
-    webhook = DiscordWebhook(url=settings.announcer.discord_webhook_url)
+    webhook = DiscordWebhook(url=settings.events.discord_webhook_url)
     embed = DiscordEmbed(title='Checkolotl Finished', color=13369344)
     embed.set_footer(text='Checkolotl by scorpion3013')
     embed.set_timestamp()
@@ -55,8 +55,8 @@ def end():
     webhook.add_embed(embed)
     webhook.execute()
 
-    if settings.announcer.on_end.discord.post_results:
-        webhook = DiscordWebhook(url=settings.announcer.discord_webhook_url)
+    if settings.events.on_end.discord.post_results:
+        webhook = DiscordWebhook(url=settings.events.discord_webhook_url)
         existing = False
         for (dirpath, dirnames, filenames) in walk(settings.paths.save):
             for filename in filenames:

