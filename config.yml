@@ -1,5 +1,5 @@
 checker_general:
-  threads: 100
+  threads: 200
   order: "one" # one or all
   # one starts x threads and uses the x threads for one checker at a time
   # all statts x threads which all start a subthread for every checker. (faster but rip your network and cpu)
@@ -12,7 +12,7 @@ checker_general:
 
 
 proxies_checker:
-  skipCheck: False
+  skipCheck: True
   threads: 200
   timeout: 4
   judge_url: "https://azenv.net/"
@@ -26,40 +26,40 @@ events:
       enabled: False
       post_combos: False
   on_end:
-    command: ""
+    command: "echo test"
     discord:
       enabled: False
       post_results: False
 
 checkers:
   minecraft:
-    enabled: True
+    enabled: False
     timeout: 4
-    check_amount: 1 # rechecks if invalid or on error
+    check_amount: 2 # rechecks if invalid or on error
     remove_banned_proxy: True
     account_format: "{email}:{password}:{uuid}:{name}:{accessToken}:{clientToken}"
     outputname: "working_{checkername}_{unix}.txt"
 
   nordvpn:
-    enabled: True
+    enabled: False
     timeout: 4
-    check_amount: 4 #rechecks on error or on captcha
+    check_amount: 3 #rechecks on error or on captcha
     remove_banned_proxy: True
     account_format: "{email}:{password}:{expireunix}:%d-%m-%Y"
     outputname: "working_{checkername}_{unix}.txt"
 
   vyprvpn:
-    enabled: True
+    enabled: False
     timeout: 4
-    check_amount: 4 #rechecks on error or on captcha
+    check_amount: 3 #rechecks on error or on captcha
     remove_banned_proxy: True
     account_format: "{email}:{password}:{rank}"
     outputname: "working_{checkername}_{unix}.txt"
 
   ipvanish:
-    enabled: True
+    enabled: False
     timeout: 4
-    check_amount: 4 #rechecks on error or on captcha
+    check_amount: 3 #rechecks on error or on captcha
     remove_banned_proxy: True
     account_format: "{email}:{password}:{expireunix}:%d-%m-%Y"
     outputname: "working_{checkername}_{unix}.txt"

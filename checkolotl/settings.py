@@ -38,22 +38,22 @@ class settings:
         ip_regex = _config["ip_regex"]
 
     class events:
-        _config = config["announcer"]
+        _config = config["events"]
         discord_webhook_url = _config["discord_webhook_url"]
 
         class on_start:
-            _config = config["announcer"]["on_start"]
+            _config = config["events"]["on_start"]
             command = _config["command"]
             class discord:
-                _config = config["announcer"]["on_start"]["discord"]
+                _config = config["events"]["on_start"]["discord"]
                 enabled = _config["enabled"]
                 post_combos = _config["post_combos"]
 
         class on_end:
-            _config = config["announcer"]["on_end"]
+            _config = config["events"]["on_end"]
             command = _config["command"]
             class discord:
-                _config = config["announcer"]["on_end"]["discord"]
+                _config = config["events"]["on_end"]["discord"]
                 enabled = _config["enabled"]
                 post_results = _config["post_results"]
 
